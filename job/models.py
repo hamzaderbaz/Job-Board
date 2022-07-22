@@ -17,6 +17,9 @@ JOB_TYPE = (
     ('Part Time ','Part Time'),
 )
 
+def image_upload(instance, filename):
+    imagename, extention = filename.split(".")
+    return "jobs/%s.%s"%(instance.id, extention)
 
 
 class Job(models.Model):      #class equal thing in DB is table   # انشأنا  جدول في الداتابيز اسمه Job  
@@ -32,6 +35,7 @@ class Job(models.Model):      #class equal thing in DB is table   # انشأنا
     experience = models.IntegerField(default=1) # الديفولت اللي هو شي الافتراضي 
     #لما يكون 0 نسيب اليوزر يفرض المرتب اللي هو عاوزه انما ال 1 انت اللي بتفرض الرقم زي انك عاوز موظف خبرة 5 سنين
     
+    image = models.ImageField(upload_to = image_upload)
     
     def __str__(self):
         return self.title # هنا رجع التايتيل علشان يعرف يسمي اسم الوظيفة زي ما هو عاوز 

@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.text import slugify
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -22,11 +24,12 @@ def image_upload(instance, filename):
     return "jobs/%s.%s"%(instance.id, extention)
 
 
-class Job(models.Model):      #class equal thing in DB is table   # انشأنا  جدول في الداتابيز اسمه Job  
+class Job(models.Model):      #class equal thing in DB is table   # انشأنا  جدول في الداتابيز اسمه Job 
+    owner = models.ForeignKey(User, related_name='job_owner', on_delete= models.CASCADE)
     title = models.CharField(max_length = 100)     #column   # وانشأنا تحته عمود اسمه titl  
     #location = 
     job_type = models.CharField(max_length = 15, choices= JOB_TYPE) #job_type is Full Time or Part Time
-    description = models.TextField(max_length = 1000 ) #use textfield cause 1000 lenght (more words used) 
+    description = models.TextField(max_length = 10000 ) #use textfield cause 1000 lenght (more words used) 
     published_at = models.DateTimeField(auto_now = False) #use datefield cause published at some date 
     vacancy = models.IntegerField(default=1) # دي بتعني عدد البوزيشنس المتاحة 
     salary = models.IntegerField(default=0) # IntegerField اي حاجة بارقام نستخدم ال 
@@ -34,9 +37,15 @@ class Job(models.Model):      #class equal thing in DB is table   # انشأنا
     #'category' with single cote cause class category came after and python work step by step
     experience = models.IntegerField(default=1) # الديفولت اللي هو شي الافتراضي 
     #لما يكون 0 نسيب اليوزر يفرض المرتب اللي هو عاوزه انما ال 1 انت اللي بتفرض الرقم زي انك عاوز موظف خبرة 5 سنين
-    
-    image = models.ImageField(upload_to = image_upload)
-    
+    #image = models.ImageField(upload_to = image_upload)
+
+    slug = models.SlugField(blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Job, self).save(*args, **kwargs) # Call the real save() method
+
+
     def __str__(self):
         return self.title # هنا رجع التايتيل علشان يعرف يسمي اسم الوظيفة زي ما هو عاوز 
 
@@ -46,5 +55,26 @@ class category(models.Model):
     
     def __str__(self):
         return self.name
+
+class Apply(models.Model):
+    job = models.ForeignKey(Job,related_name='apply_job', on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=100)
+    website = models.URLField()
+    CV = models.FileField(upload_to='apply/')
+    cover_letter = models.TextField(max_length=500)
+    created_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.name
+
+
+
+
+
+
+
+
+
 
 

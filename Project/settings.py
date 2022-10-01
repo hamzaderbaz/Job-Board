@@ -31,14 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #my apps
-    'job', 'home', 'blog', 'contact', 'accounts', 'bootstrap4',
+    # my apps
+    'job', 'home', 'blog', 'contact', 'bootstrap4', 'django_filters', 'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,13 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_HOST_USER ='hamza.derbaz12@gmail.com'
+EMAIL_HOST_PASSWORD ='jfigssxchfzukgyz'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+
+
+

@@ -1,0 +1,44 @@
+/*{
+  "python.pythonPath": "E:\\Hamza Hassan\\Work\\Back End\\Project Django\\Job-Board\\Scripts\\python.exe",
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "autopep8",
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--load-plugin=pylint_django"]
+}*/
+
+  //"python.defaultInterpreterPath": "C:\\Users\\DELL\\anaconda3\\envs\\tea_facts\\python.exe",
+  //"cSpell.userWords": [],
+  //"tabnine.experimentalAutoImports": true,
+  //"editor.fontWeight": null,
+  //"editor.defaultFormatter": null,
+  //"editor.formatOnSave": true,
+  //"editor.defaultFormatter": "esbenp.prettier-vscode",
+ // "editor.defaultFormatter": "esbenp.prettier-vscode",
+ 
+/*  "[html]": {
+    "editor.defaultFormatter": /*"esbenp.prettier-vscode" /*"vscode.html-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": /*"esbenp.prettier-vscode" "ms-python.python"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Visual Studio Dark",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },*/
+  
+  //"kite.showWelcomeNotificationOnStartup": false
+  //"python.defaultInterpreterPath": "E:\\Hamza Hassan\\Work\\Back End\\Project Django\\Job-Board\\Scripts\\python.exe"
+  //"editor.formatOnPaste": false,
+  //"editor.formatOnType": false,
+  //"window.zoomLevel": 1,
+  //"editor.fontWeight": "normal"
+

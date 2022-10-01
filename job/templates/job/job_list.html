@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% load bootstrap4 %}
 {%block body%}
 
@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="col-lg-9">
         <div class="recent_joblist_wrap">
           <div class="recent_joblist white-bg">
@@ -53,9 +53,11 @@
                   <div class="thumb">
                     <img src="img/svg_icon/1.svg" alt="" />
                   </div>
-                  
+
                   <div class="jobs_conetent">
-                    <a href="{% url 'jobs:job_detail' job.slug %}"><h4>{{job}}</h4></a>
+                    <a href="{% url 'jobs:job_detail' job.slug %}">
+                      <h4>{{job}}</h4>
+                    </a>
                     <div class="links_locat d-flex align-items-center">
                       <div class="location">
                         <p><i class="fa fa-map-marker"></i> California, USA</p>
@@ -102,7 +104,7 @@
                     <a href="?page={{i}}"><span> {{i}} </span></a>
                   </li>
                   <!--الصفحة الاولي -->
-                  {% endfor %} 
+                  {% endfor %}
 
                   {% if jobs.has_next %}
                   <li>
@@ -122,5 +124,4 @@
     </div>
   </div>
 </div>
-<!-- job_listing_area_end  -->
 {%endblock body%}

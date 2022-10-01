@@ -26,7 +26,9 @@
 								<img src="img/svg_icon/1.svg" alt="" />
 							</div>
 							<div class="jobs_conetent">
-								<a href="#"><h4>{{job}}</h4></a>
+								<a href="#">
+									<h4>{{job}}</h4>
+								</a>
 								<div class="links_locat d-flex align-items-center">
 									<div class="location">
 										<p>
@@ -117,26 +119,39 @@
 						<div id="map" style="height: 200px"></div>
 						<script>
 							function initMap() {
-								var uluru = { lat: -25.363, lng: 131.044 };
-								var grayStyles = [
-									{
+								var uluru = {
+									lat: -25.363,
+									lng: 131.044
+								};
+								var grayStyles = [{
 										featureType: "all",
-										stylers: [{ saturation: -90 }, { lightness: 50 }],
+										stylers: [{
+											saturation: -90
+										}, {
+											lightness: 50
+										}],
 									},
 									{
 										elementType: "labels.text.fill",
-										stylers: [{ color: "#ccdee9" }],
+										stylers: [{
+											color: "#ccdee9"
+										}],
 									},
 								];
 								var map = new google.maps.Map(document.getElementById("map"), {
-									center: { lat: -31.197, lng: 150.744 },
+									center: {
+										lat: -31.197,
+										lng: 150.744
+									},
 									zoom: 9,
 									styles: grayStyles,
 									scrollwheel: false,
 								});
 							}
 						</script>
-						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap"></script>
+						<script
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap">
+						</script>
 					</div>
 				</div>
 			</div>

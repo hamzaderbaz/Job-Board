@@ -1,6 +1,6 @@
-from django.urls import path, include
-from . import views
-from . import api
+from django.urls import include, path
+
+from . import api, views
 
 app_name = 'job'
 

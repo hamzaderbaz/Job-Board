@@ -1,10 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.shortcuts import redirect, render
 from django.urls import reverse
+
+from .filters import JobFilter
 from .form import ApplyForm, JobForm
 from .models import Job
-from django.contrib.auth.decorators import login_required
-from .filters import JobFilter
 
 # Create your views here.
 

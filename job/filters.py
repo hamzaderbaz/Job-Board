@@ -1,5 +1,7 @@
 import django_filters
+
 from .models import Job
+
 
 class JobFilter(django_filters.FilterSet):
     #tital = django_filters.CharFilter(lookup_expr='icontains')

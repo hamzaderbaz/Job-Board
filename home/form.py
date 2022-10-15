@@ -2,7 +2,7 @@ from django import forms
 
 from .models import Apply, Job
 
-
+'''
 class ApplyForm(forms.ModelForm):
     class Meta:
         model = Apply
@@ -14,3 +14,4 @@ class JobForm(forms.ModelForm):
         model = Job
         fields = '__all__'
         exclude = ('slug', 'owner')
+'''

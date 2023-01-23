@@ -1,5 +1,6 @@
 {
   "name": "vscode-django",
+  "type":"module",
   "displayName": "Django",
   "description": "Beautiful syntax and scoped snippets for perfectionists with deadlines",
   "version": "1.10.0",
@@ -42,6 +43,7 @@
   "browser": "./out/extension-web",
   "scripts": {
     "start": "node server.js",
+    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' node src/index.js",
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "lint": "eslint src --ext ts",

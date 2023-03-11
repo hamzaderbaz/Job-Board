@@ -221,10 +221,7 @@ STATIC_ROOT = "/var/www/example.com/static/"
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #sSTATICFILES_DIRS = (os.path.join(BASE_DIR / "static", '/var/www/static/'), )
-<<<<<<< HEAD
-=======
 
->>>>>>> e6fd73b2d3177fa8a78fa21904bf01c97439bbb4
 
 
 MEDIA_URL = 'media/'

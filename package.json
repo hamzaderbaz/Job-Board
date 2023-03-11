@@ -1,5 +1,6 @@
 {
   "name": "vscode-django",
+  "type":"module",
   "displayName": "Django",
   "description": "Beautiful syntax and scoped snippets for perfectionists with deadlines",
   "version": "1.10.0",
@@ -42,12 +43,15 @@
   "browser": "./out/extension-web",
   "scripts": {
     "start": "node server.js",
+    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' node src/index.js",
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "lint": "eslint src --ext ts",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
     "test": "yarn run compile && node ./node_modules/vscode/bin/test",
+    "dev": "webpack --mode development ./src/templates/base.html --output-path ./static/frontend",
+    "build": "webpack --mode production ./src/templates/base.html --output-path ./static/frontend",
     "compile-web": "webpack",
     "watch-web": "webpack",
     "package-web": "webpack --mode production --devtool hidden-source-map",

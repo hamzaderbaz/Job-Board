@@ -27,5 +27,3 @@ This Website helps you Find your Dream Job Through the site, you can browse for 
 * Django REST framework 
 * Django-bootstrap4
 * Django-filter
-* Serializers
-* Slugify

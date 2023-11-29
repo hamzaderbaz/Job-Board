@@ -20,19 +20,28 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from job import views
+from accounts import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('accounts/profile/', include('accounts.urls', namespace='profile')),
-    path('', include('home.urls')),
+   
 
 
     # we have to call it (like: jobs)
+    path('', include('home.urls')),
+    # path('login/', views.login, name='login'),
+    # path('signup/', views.signup, name='signup'),
+    # path('logout/', views.logout, name='logout'),
     path('jobs/', include('job.urls', namespace='jobs')),
     path('contact-us/', include('contact.urls', namespace='contact')),
+
+
+
     path('api-auth/', include('rest_framework.urls')),
 
 

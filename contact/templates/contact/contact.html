@@ -14,6 +14,58 @@
         </div>
     </div>
 </div>
+
+
+
+<!-- contact.html -->
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success' %}
+                <div class="cover"></div>
+                <div class="success-message">
+                    <p>{{ message }}</p>
+                </div>
+                <style>
+                    @keyframes fadeOut {
+                        0% { opacity: 1; }
+                        100% { opacity: 0; display: none; }
+                    }
+                    .cover {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+                        z-index: 9999;
+                        animation: fadeOut 6s forwards; /* Animation for the cover */
+                    }
+                    .success-message {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: #fff; /* Change the background color */
+                        padding: 20px;
+                        border-radius: 5px;
+                        text-align: center;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+                        z-index: 10000;
+                        opacity: 1;
+                        animation: fadeOut 6s forwards; /* Animation for the message */
+                    }
+                </style>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <!-- Your other HTML content -->
+{% endblock %}
+
+
+
+
 <!--/ bradcam_area  -->
 <!-- ================ contact section start ================= -->
 <section class="contact-section section_padding">

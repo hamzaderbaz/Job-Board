@@ -88,6 +88,8 @@ MIDDLEWARE = [
 
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 
 ROOT_URLCONF = 'Project.urls'
 
@@ -98,7 +100,7 @@ TEMPLATES = [
 
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
 
-        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': ['templates'],
 
         'APP_DIRS': True,
 
@@ -251,11 +253,11 @@ EMAIL_HOST ='smtp.gmail.com'
 
 EMAIL_HOST_USER ='hamza.derbaz12@gmail.com'
 
-EMAIL_HOST_PASSWORD ='jfigssxchfzukgyz'
+EMAIL_HOST_PASSWORD ='yqrsgajiymgtqozb'
 
 EMAIL_USE_TLS = True
 
-EMAIL_PORT = 587
+EMAIL_PORT = '587'
 
 
 

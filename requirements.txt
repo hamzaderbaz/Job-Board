@@ -9,6 +9,7 @@ django-html==0.1.0
 django-rest-framework==0.1.0
 djangorestframework==3.14.0
 djangorestframework-gis==1.0
+gunicorn==21.2.0
 sqlparse==0.4.4
 tzdata==2023.3
 Pillow==10.1.0

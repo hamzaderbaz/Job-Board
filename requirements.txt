@@ -8,11 +8,16 @@ django-filter==23.4
 django-rest-framework==0.1.0
 djangorestframework==3.14.0
 filelock==3.13.1
+gunicorn==21.2.0
+packaging==23.2
 Pillow==10.1.0
+pip==23.3.1
 pipenv==2023.11.15
+pipfile==0.0.2
 platformdirs==4.0.0
 pytz==2023.3.post1
 soupsieve==2.5
 sqlparse==0.4.4
+toml==0.10.2
 tzdata==2023.3
 virtualenv==20.24.7

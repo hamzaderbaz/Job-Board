@@ -209,24 +209,30 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-'''STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
-]'''
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     '/var/www/static/',
+# ]
+
+# STATICFILES_DIRS = [ BASE_DIR / "static",'/static/', ]
 
 STATICFILES_DIRS = [ BASE_DIR / "static",'/var/www/static/', ]
 
+#STATICFILES_DIRS = (os.path.join(BASE_DIR / "static", '/var/www/static/'), )
 
-STATIC_ROOT = "/var/static/"
 
-STATIC_ROOT = '/path/to/your/static/files'
+
+
+
+STATIC_ROOT = "/static/"
+
+# STATIC_ROOT = "/var/static/"
+# STATIC_ROOT = '/path/to/your/static/files'
 
 
 #STATIC_ROOT = "/var/www/example.com/static/"
 
 #STATIC_ROOT = 'static/'
-
-#STATICFILES_DIRS = (os.path.join(BASE_DIR / "static", '/var/www/static/'), )
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -247,10 +253,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD ='django.db.models.BigAutoField'
 
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST ='smtp.gmail.com'
 
@@ -260,7 +265,7 @@ EMAIL_HOST_PASSWORD ='yqrsgajiymgtqozb'
 
 EMAIL_USE_TLS = True
 
-EMAIL_PORT = '587'
+EMAIL_PORT ='587'
 
 
 

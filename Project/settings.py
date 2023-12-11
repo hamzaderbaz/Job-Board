@@ -222,7 +222,7 @@ STATICFILES_DIRS = [
 #STATICFILES_DIRS = (os.path.join(BASE_DIR / "static", '/var/www/static/'), )
 
 
-
+STATIC_ROOT = "/var/www/job-board-7gqz.onrender.com/static/"
 
 
 # STATIC_ROOT = "/static/"

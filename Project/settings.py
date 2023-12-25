@@ -211,7 +211,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    "/var/www/static/",
+    # "/var/www/static/",
 ]
 
 
@@ -219,19 +219,17 @@ STATICFILES_DIRS = [
 
 
 # STATICFILES_DIRS = [ BASE_DIR / "static",'/static/', ]
-#STATICFILES_DIRS = (os.path.join(BASE_DIR / "static", '/var/www/static/'), )
+# STATICFILES_DIRS = (os.path.join(BASE_DIR / "static", '/var/www/static/'), )
 
 
-STATIC_ROOT = "/var/www/job-board-7gqz.onrender.com/static/"
+# STATIC_ROOT = "/var/www/job-board-7gqz.onrender.com/static/"
 
 
-# STATIC_ROOT = "/static/"
+STATIC_ROOT = "/static/"
 
 
 # STATIC_ROOT = "/var/static/"
 # STATIC_ROOT = '/path/to/your/static/files'
-# STATIC_ROOT = "/var/www/example.com/static/"
-# STATIC_ROOT = 'static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
@@ -239,6 +237,7 @@ STATIC_ROOT = "/var/www/job-board-7gqz.onrender.com/static/"
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / "media"
+
 
 
 

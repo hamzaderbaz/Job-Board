@@ -3,12 +3,12 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import redirect, render
 from django.urls import reverse
 
-from .forms import ProfileForm, SignupForm, UserForm#, LoginForm
+from .forms import ProfileForm, SignupForm, UserForm
 from .models import Profile
 
 # Create your views here.
 
-
+# View function for user signup
 def signup(request):
     if request.method == "POST":
         form = SignupForm(request.POST)
@@ -16,14 +16,13 @@ def signup(request):
             form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
-            user = authenticate(username= username, password= password)
+            user = authenticate(username=username, password=password)
             login(request, user)
             return redirect('accounts:profile')
     else:
         form = SignupForm()
 
-    return render(request,'registration/signup.html',{'form':form})
-
+    return render(request, 'registration/signup.html', {'form': form})
 
 
 
@@ -53,39 +52,38 @@ def signup(request):
 
 
 
+# View function for user profile
 def profile(request):
     profile = Profile.objects.get(user=request.user)
     return render(request, 'accounts/profile.html', {'profile': profile})
 
 
 
-
-
+# View function for editing user profile
 def profile_edit(request):
-
     profile = Profile.objects.get(user=request.user)
     if request.method == "POST":
         userform = UserForm(request.POST, instance=request.user)
-        profileform = ProfileForm(request.POST,request.FILES, instance=profile)
+        profileform = ProfileForm(request.POST, request.FILES, instance=profile)
         if userform.is_valid and profileform.is_valid():
             userform.save()
             myprofile = profileform.save(commit=False)
             myprofile.user = request.user
             myprofile.save()
             return redirect(reverse('accounts:profile'))
-        
     else:
         userform = UserForm(instance=request.user)
         profileform = ProfileForm(instance=profile)
 
     return render(request, 'accounts/profile_edit.html', {'userform': userform, 'profileform': profileform})
+
     
 
 
+# View function for user logout
 def logout(request):
     logout(request)
     return redirect('home')  # Redirect to a specific URL after logout, 'home' in this case
-
 
 
 

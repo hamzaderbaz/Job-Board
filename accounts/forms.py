@@ -6,11 +6,11 @@ from django.contrib.auth.models import User
 
 from .models import Profile
 
-
+# Form for user signup using UserCreationForm
 class SignupForm(UserCreationForm):
     class Meta:
-        model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        model = User  # Using the User model
+        fields = ['username', 'email', 'password1', 'password2']  # Fields required for signup
 
 
 
@@ -33,17 +33,18 @@ class SignupForm(UserCreationForm):
     
 
 
+# Form for updating User model fields
 class UserForm(forms.ModelForm):
     class Meta:
-       model = User
-       fields = ['username', 'first_name', 'last_name', 'email']
+        model = User  # Using the User model
+        fields = ['username', 'first_name', 'last_name', 'email']  # Fields for updating user details
 
 
-
+# Form for updating Profile model fields
 class ProfileForm(forms.ModelForm):
     class Meta:
-        model = Profile
-        fields = ['city', 'phone_number', 'image']
+        model = Profile  # Using the Profile model
+        fields = ['city', 'phone_number', 'image']  # Fields for updating profile details
 
 
 

@@ -4,8 +4,7 @@ from .models import Job
 # Filter class for Job model
 class JobFilter(django_filters.FilterSet):
     
-    # Filter for job descriptions containing specific text
-    description = django_filters.CharFilter(lookup_expr='icontains')
+    # description = django_filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
         model = Job  # Specifies the model to be filtered

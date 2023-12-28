@@ -22,15 +22,11 @@
     {% if messages %}
         {% for message in messages %}
             {% if message.tags == 'success' %}
-                <div class="cover"></div>
                 <div class="success-message">
                     <p>{{ message }}</p>
                 </div>
                 <style>
-                    @keyframes fadeOut {
-                        0% { opacity: 1; }
-                        100% { opacity: 0; display: none; }
-                    }
+                    /* Other CSS styles remain unchanged */
                     .cover {
                         position: fixed;
                         top: 0;
@@ -56,12 +52,20 @@
                         animation: fadeOut 6s forwards; /* Animation for the message */
                     }
                 </style>
+                <script>
+                    setTimeout(() => {
+                        document.querySelector('.success-message').remove();
+                    }, 6000); /* 6000ms (6s) matches the animation duration */
+                </script>
             {% endif %}
         {% endfor %}
     {% endif %}
 
     <!-- Your other HTML content -->
 {% endblock %}
+
+
+
 
 
 
@@ -80,41 +84,39 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
+                                <input class="form-control" name="name" id="name" type="name"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Name'"
+                                    placeholder='Enter Your Name'>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <input class="form-control" name="email" id="email" type="email"
+                                    onfocus="this.placeholder = '' " onblur="this.placeholder = 'Enter Your Email' "
+                                    placeholder='Enter Your Email'>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
                                 <input class="form-control" name="subject" id="subject" type="text"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
                                     placeholder='Enter Subject'>
                             </div>
                         </div>
-
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <input class="form-control" name="email" id="email" type="email"
-                                    onfocus="this.placeholder = '' " onblur="this.placeholder = 'Enter email address' "
-                                    placeholder='The Email Address To :'>
-                            </div>
-                        </div>
-
                         <div class="col-12">
                             <div class="form-group">
-
                                 <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"
                                     placeholder='Enter Message'></textarea>
                             </div>
                         </div>
-                        <!-- <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control" name="name" id="name" type="text"
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
-                                        placeholder='Enter your name'>
-                                </div>
-                            </div>-->
                     </div>
                     <div class="form-group mt-3">
                         <button type="submit" class="button button-contactForm btn_4 boxed-btn">Send
                             Message</button>
                     </div>
                 </form>
+                
             </div>
             <div class="col-lg-4">
                 <div class="media contact-info">

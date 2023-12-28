@@ -1,4 +1,6 @@
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate 
+from django.contrib.auth import login as auth_login
+from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import redirect, render
 from django.urls import reverse
@@ -6,7 +8,7 @@ from django.urls import reverse
 from .forms import ProfileForm, SignupForm, UserForm
 from .models import Profile
 
-# Create your views here.
+
 
 # View function for user signup
 def signup(request):
@@ -18,7 +20,7 @@ def signup(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('accounts:profile')
+            return redirect('profile')
     else:
         form = SignupForm()
 
@@ -27,28 +29,24 @@ def signup(request):
 
 
 
-# def login(request):
-#     if request.method == "POST":
-#         form = AuthenticationForm(request, data=request.POST)
-#         if form.is_valid():
-#             username = form.cleaned_data['username']
-#             password = form.cleaned_data['password']
-#             user = authenticate(username=username, password=password)
-#             if user is not None:
-#                 login(request, user)
-#                 return redirect('home')  # Replace 'home' with your desired URL after successful login
-#             else:
-#                 # Handle invalid login credentials
-#                 error_message = "Invalid username or password."
-#                 return render(request, 'login.html', {'form': form, 'error_message': error_message})
-#     else:
-#         form = AuthenticationForm()
+def login(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                auth_login(request, user)
+                return redirect('profile')  # Replace 'home' with your desired URL after successful login
+            else:
+                # Handle invalid login credentials
+                error_message = "Invalid username or password."
+                return render(request, 'registration/login.html', {'form': form, 'error_message': error_message})
+    else:
+        form = AuthenticationForm()
 
-#     return render(request, 'login.html', {'form': form})
-
-
-
-
+    return render(request, 'registration/login.html', {'form': form})
 
 
 
@@ -56,6 +54,7 @@ def signup(request):
 def profile(request):
     profile = Profile.objects.get(user=request.user)
     return render(request, 'accounts/profile.html', {'profile': profile})
+
 
 
 
@@ -70,7 +69,7 @@ def profile_edit(request):
             myprofile = profileform.save(commit=False)
             myprofile.user = request.user
             myprofile.save()
-            return redirect(reverse('accounts:profile'))
+            return redirect(reverse('profile'))
     else:
         userform = UserForm(instance=request.user)
         profileform = ProfileForm(instance=profile)
@@ -82,8 +81,8 @@ def profile_edit(request):
 
 # View function for user logout
 def logout(request):
-    logout(request)
-    return redirect('home')  # Redirect to a specific URL after logout, 'home' in this case
+    auth_logout(request)
+    return render(request, 'registration/logged_out.html')  # Render your custom logged-out template
 
 
 

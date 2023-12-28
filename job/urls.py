@@ -2,16 +2,20 @@ from django.urls import include, path
 from django.contrib import admin
 
 from . import api, views
+from .views import add_job, job_detail, job_list
+# from .views import Joblist
 
 app_name = 'job'
 
 urlpatterns = [
     
-    #path('', views.home, name='base'),
+
     path('', views.job_list, name='job_list'),
-    path('add', views.add_job, name='add_job'),
-    path('<str:slug>', views.job_detail, name='job_detail'),
+    # path('', job_list.as_view, name='Joblist'),
+    # path('', Joblist.as_view, name='Joblist'),
+    path('<str:slug>/', views.job_detail, name='job_detail'),
     
+
     #api
     path('api/jobs', api.job_list_api, name='job_list_api'),
     path('api/jobs/<int:id>', api.job_detail_api, name='job_detail_api'),

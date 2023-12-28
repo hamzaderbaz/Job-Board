@@ -19,29 +19,47 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
-from job import views
+
+
+# from job import views
 from accounts import views
+import job
 
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
+    path('', include('home.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
-    path('accounts/', include('accounts.urls', namespace='accounts')),
-    path('accounts/profile/', include('accounts.urls', namespace='profile')),
-   
-
-
-    # we have to call it (like: jobs)
-    path('', include('home.urls')),
-    # path('login/', views.login, name='login'),
-    # path('signup/', views.signup, name='signup'),
-    # path('logout/', views.logout, name='logout'),
     path('jobs/', include('job.urls', namespace='jobs')),
     path('contact-us/', include('contact.urls', namespace='contact')),
 
 
 
+    # URL of registrations
+    path('login/', views.login, name='login'),
+    path('signup/', views.signup, name='signup'),
+    path('logout/', views.logout, name='logout'),
+
+
+
+    # URL of accounts app
+    path('profile/', views.profile, name='profile'),
+    path('profile/edit-profile/', views.profile_edit, name='profile_edit'),
+
+
+
+    # URL of jobs app
+    path('add-job/', job.views.add_job, name='add_job'),
+
+
+
+
+
+
+
+    # APIs URL
     path('api-auth/', include('rest_framework.urls')),
 
 

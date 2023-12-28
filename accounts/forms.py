@@ -14,24 +14,6 @@ class SignupForm(UserCreationForm):
 
 
 
-# class LoginForm(AuthenticationForm):
-#     class Meta:
-#         model = Profile
-#         fields = ['username', 'password']
-
-#     # def clean(self):
-#     #     username = self.cleaned_data.get('username')
-#     #     password = self.cleaned_data.get('password')
-
-#     #     if username and password:
-#     #         user = authenticate(username=username, password=password)
-#     #         if user is None:
-#     #             raise forms.ValidationError("Please enter a correct username and password.")
-#     #         elif not user.is_active:
-#     #             raise forms.ValidationError("This account is inactive.")
-#     #     return self.cleaned_data
-    
-
 
 # Form for updating User model fields
 class UserForm(forms.ModelForm):
@@ -55,3 +37,23 @@ class ProfileForm(forms.ModelForm):
 #         super().__init__(*args, **kwargs)
 #         self.fields['username'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Username'})
 #         self.fields['password'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Password'})
+
+
+
+
+class LoginForm(AuthenticationForm):
+    class Meta:
+        model = Profile
+        fields = ['username', 'password1']
+
+    # def clean(self):
+    #     username = self.cleaned_data.get('username')
+    #     password = self.cleaned_data.get('password')
+
+    #     if username and password:
+    #         user = authenticate(username=username, password=password)
+    #         if user is None:
+    #             raise forms.ValidationError("Please enter a correct username and password.")
+    #         elif not user.is_active:
+    #             raise forms.ValidationError("This account is inactive.")
+    #     return self.cleaned_data

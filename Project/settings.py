@@ -237,9 +237,10 @@ STATIC_ROOT = "/static/"
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_ROOT = BASE_DIR / "static/img"
 
-
-
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
@@ -263,7 +264,7 @@ EMAIL_HOST_PASSWORD ='yqrsgajiymgtqozb'
 
 EMAIL_USE_TLS = True
 
-EMAIL_PORT ='587'
+EMAIL_PORT = 587
 
 
 

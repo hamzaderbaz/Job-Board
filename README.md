@@ -8,18 +8,22 @@ This Website helps you Find your Dream Job Through the site, you can browse for 
 ## Design
 
 <p float="left" align="middle">
-  <img src="https://user-images.githubusercontent.com/51893602/204061016-8ff9a15b-4148-44ee-9f3a-e524843f84d7.PNG" width="100%" />
-  <img src="https://user-images.githubusercontent.com/51893602/204061173-c2a3b776-43b3-4ba6-86a8-97efbb4fdb84.PNG" width="100%" /> 
-  <img src="https://user-images.githubusercontent.com/51893602/204061187-b607fd6d-909d-4c2b-a72a-11bce8a27d3c.PNG" width="100%" />
+  
+  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51893602/298406075-253414d5-554f-4f1b-bd5f-857022082f81.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240121T192313Z&X-Amz-Expires=300&X-Amz-Signature=f7f8598eea323c5f22cfb3d629499a79c55c6af42673bd1bbe178c6f3c804342&X-Amz-SignedHeaders=host&actor_id=51893602&key_id=0&repo_id=497711483" width="33%" />
+  
+  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51893602/298405922-f84d2e04-8df5-40b7-85c2-ed834cc572b3.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240121T192256Z&X-Amz-Expires=300&X-Amz-Signature=2bc1bb35d897e255ea5da657695467a7e851dd887719778fc01a9693aeb2d3e7&X-Amz-SignedHeaders=host&actor_id=51893602&key_id=0&repo_id=497711483" width="33%" /> 
+  
+  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51893602/298406081-7c2e83dd-e6c3-438b-9dc1-f1cbb4c8e19a.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240121T192239Z&X-Amz-Expires=300&X-Amz-Signature=8ab5479a609add43c524d09b939db3a9378adf199814b37b38d090b056110357&X-Amz-SignedHeaders=host&actor_id=51893602&key_id=0&repo_id=497711483" width="33%" />
+
 </p>
 
 
 ## Development
 
-### Programming languages and Framworks
-* Html
-* Css
-* Javascript
+### Programming languages and Frameworks
+* HTML
+* CSS
+* JavaScript
 * Python
 * Django
   
@@ -28,4 +32,3 @@ This Website helps you Find your Dream Job Through the site, you can browse for 
 * Django-bootstrap4
 * Django-filter
 * Serializers
-* Slugify

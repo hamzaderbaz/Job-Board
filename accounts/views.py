@@ -38,9 +38,8 @@ def login(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 auth_login(request, user)
-                return redirect('profile')  # Replace 'home' with your desired URL after successful login
+                return redirect('profile')  
             else:
-                # Handle invalid login credentials
                 error_message = "Invalid username or password."
                 return render(request, 'registration/login.html', {'form': form, 'error_message': error_message})
     else:
@@ -82,7 +81,7 @@ def profile_edit(request):
 # View function for user logout
 def logout(request):
     auth_logout(request)
-    return render(request, 'registration/logged_out.html')  # Render your custom logged-out template
+    return render(request, 'registration/logged_out.html')
 
 
 

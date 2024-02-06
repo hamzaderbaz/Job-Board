@@ -8,9 +8,9 @@ This Website helps you Find your Dream Job Through the site, you can browse for 
 ## Design
 
 <p float="left" align="middle">
-  <img src="https://user-images.githubusercontent.com/51893602/204061016-8ff9a15b-4148-44ee-9f3a-e524843f84d7.PNG" width="100%" />
-  <img src="https://user-images.githubusercontent.com/51893602/204061173-c2a3b776-43b3-4ba6-86a8-97efbb4fdb84.PNG" width="100%" /> 
-  <img src="https://user-images.githubusercontent.com/51893602/204061187-b607fd6d-909d-4c2b-a72a-11bce8a27d3c.PNG" width="100%" />
+  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/dacf7a2c-4914-4981-bad5-17a6338a513f" width="33%" />
+  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/933629ee-5ff1-451b-86a8-0ec16cb26e90" width="33%" /> 
+  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/3a993f6b-ebe2-474c-b950-94cc16d98cc8" width="33%" />
 </p>
 
 
@@ -27,5 +27,3 @@ This Website helps you Find your Dream Job Through the site, you can browse for 
 * Django REST framework 
 * Django-bootstrap4
 * Django-filter
-* Serializers
-* Slugify

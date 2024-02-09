@@ -8,9 +8,9 @@ This Website helps you Find your Dream Job Through the site, you can browse for 
 ## Design
 
 <p float="left" align="middle">
-  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/dacf7a2c-4914-4981-bad5-17a6338a513f" width="33%" />
-  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/933629ee-5ff1-451b-86a8-0ec16cb26e90" width="33%" /> 
-  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/3a993f6b-ebe2-474c-b950-94cc16d98cc8" width="33%" />
+  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/dacf7a2c-4914-4981-bad5-17a6338a513f" width="30%" />
+  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/933629ee-5ff1-451b-86a8-0ec16cb26e90" width="30%" /> 
+  <img src="https://github.com/hamzaderbaz/Job-Board/assets/51893602/3a993f6b-ebe2-474c-b950-94cc16d98cc8" width="30%" />
 </p>
 
 

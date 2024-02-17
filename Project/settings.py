@@ -65,7 +65,7 @@ INSTALLED_APPS = [
 
     # my apps
 
-    'job', 'home', 'blog', 'contact', 'bootstrap4', 'django_filters', 'rest_framework',
+    'job', 'home', 'contact', 'bootstrap4', 'django_filters', 'rest_framework',
 
 ]
 

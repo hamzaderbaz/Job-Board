@@ -17,14 +17,20 @@
 {% endif %}
 
 <form method="post" action="{% url 'login' %}">
-  <h4>Signin With Your Email Address</h4>
+  <div class="col-md-8 mx-auto">
+
+  <h4>Signin username or email</h4>
   {% csrf_token %}
   {% bootstrap_form form %}
-  <input type="submit" value="login" class="boxed-btn3 w-100" />
-  <input type="hidden" name="next" value="{{ next }}">
-</form>
+  {% buttons %}
+    <button type="submit" value="login" class="boxed-btn3 w-100">Login</button>
+  {% endbuttons %}
+  {% comment %} <input type="submit" value="login" class="boxed-btn3 w-100" /> {% endcomment %}
+  {% comment %} <input type="hidden" name="next" value="{{ next }}"> {% endcomment %}
+  <p><a href="{% url 'password_reset' %}">Forgot Password?</a></p>
 
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Forgot Password?</a></p>
+  </div>
+
+</form>
 
 {% endblock %}

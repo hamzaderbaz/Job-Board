@@ -1,3 +1,4 @@
-[submodule "path_to_submodule"] 
-  path = path_to_submodule 
-  url = git://url-of-source/
+/meadia/
+/blog/
+/vscode-django/
+/package.json/

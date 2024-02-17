@@ -4,11 +4,13 @@
 {% block content %}
 
 <form method="post">
+  <div class="col-md-8 mx-auto">
+
   <h4>Signup Now</h4>
   {% csrf_token %}
   {% bootstrap_form form %}
   <input type="submit" value="Signup" class="boxed-btn3 w-100" />
-
+  </div>
 </form>
 
 {% endblock %}
